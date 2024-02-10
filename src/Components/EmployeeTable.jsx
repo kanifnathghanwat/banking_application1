@@ -48,6 +48,19 @@ const EmployeeTable = () => {
             {/*<h2>Employee Table</h2>*/}
             <div className="table-container">
                 <h2>Employee Table</h2>
+
+                <button className="custom-button" onClick={() => fetchEmployees()}>Get Data </button>
+            <button className="custom-button" onClick={() => addEmployee()}> Add Employee </button>
+
+            <div>
+                
+                {successMessage && (
+                    <div className="success-message">
+                        {successMessage}
+                    </div>
+                )}
+            </div>
+                
                 <table className="employee-table">
                     <thead>
                         <tr>
@@ -71,17 +84,7 @@ const EmployeeTable = () => {
                     </tbody>
                 </table>
             </div>
-            <button className="custom-button" onClick={() => fetchEmployees()}>Get Data </button>
-            <button className="custom-button" onClick={() => addEmployee()}> Add Employee </button>
-
-            <div>
-                
-                {successMessage && (
-                    <div className="success-message">
-                        {successMessage}
-                    </div>
-                )}
-            </div>
+            
 
         </div>
     );
